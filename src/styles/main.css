@@ -971,19 +971,39 @@ body.nav-open .nav__toggle span::after { transform: rotate(-45deg); }
    ============================================================ */
 .cta {
   position: relative; overflow: hidden; isolation: isolate;
-  border-radius: var(--radius-lg); border: 1px solid var(--hairline-strong);
-  padding: clamp(4.5rem,3.5rem+5vw,7.5rem) clamp(2rem,1rem+4vw,5rem);
+  border: 0; border-radius: var(--radius-lg);
+  padding: clamp(5rem,3.5rem+6vw,8.5rem) clamp(2rem,1rem+4vw,5rem);
   text-align: center;
-  box-shadow: 0 40px 120px -50px rgba(0,0,0,0.9), inset 0 0 120px -60px var(--glow);
+  box-shadow: inset 0 0 180px -80px var(--glow);
 }
 .cta__actions { margin-bottom: 0.5rem; }
-.cta::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; z-index: 1;
-  background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
-  background-size: 45% 100%; background-repeat: no-repeat;
-  animation: ctaSheen 6s linear infinite;
+/* launch-signal pulse rings emanating behind the content */
+.cta::before, .cta::after {
+  content: ''; position: absolute; left: 50%; top: 47%; width: min(660px, 86%); aspect-ratio: 1;
+  transform: translate(-50%, -50%); border: 1px solid var(--hairline);
+  border-radius: 50%; opacity: 0; z-index: -1; pointer-events: none;
+  animation: ctaRing 7s cubic-bezier(0.16,1,0.3,1) infinite;
 }
-@keyframes ctaSheen { 0% { background-position: -50% 0; } 100% { background-position: 150% 0; } }
+.cta::after { animation-delay: 3.5s; }
+@keyframes ctaRing {
+  0% { transform: translate(-50%,-50%) scale(0.3); opacity: 0; }
+  14% { opacity: 0.5; }
+  100% { transform: translate(-50%,-50%) scale(1.9); opacity: 0; }
+}
+/* clean centered kicker (replaces the off-center numbered eyebrow) */
+.cta__kicker {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gold);
+  border: 1px solid var(--hairline); border-radius: var(--radius-pill);
+  padding: 0.45rem 1rem; margin: 0 auto 1.75rem;
+  background: rgba(212,175,55,0.05); backdrop-filter: blur(6px);
+}
+.cta__kicker .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 0 var(--glow-strong); animation: goldPulse 2.4s infinite; }
+@keyframes goldPulse { 0% { box-shadow: 0 0 0 0 rgba(212,175,55,0.5); } 70% { box-shadow: 0 0 0 7px rgba(212,175,55,0); } 100% { box-shadow: 0 0 0 0 rgba(212,175,55,0); } }
+.cta { transition: box-shadow var(--dur-slow) var(--ease-out); }
+.cta:hover { box-shadow: inset 0 0 220px -55px var(--glow-strong); }
+.cta__actions .btn:hover { transform: translateY(-3px) scale(1.03); }
 .cta__bg {
   position: absolute; inset: -15%; z-index: -2; will-change: transform;
   background-image:
