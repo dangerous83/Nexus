@@ -1042,7 +1042,7 @@ body.nav-open .nav__toggle span::after { transform: rotate(-45deg); }
 /* ============================================================
    FOOTER
    ============================================================ */
-.site-footer { position: relative; z-index: 1; border-top: 1px solid var(--hairline); background: var(--bg-pure); padding-block: clamp(3rem,2rem+4vw,5rem) 2.5rem; }
+.site-footer { position: relative; z-index: 1; border-top: 1px solid var(--hairline); background: var(--bg-pure); padding-block: clamp(4.5rem,3rem+5vw,7rem) 3rem; }
 .footer__top { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 2.5rem; }
 .footer__brand { max-width: 36ch; }
 .footer__brand .brand { font-size: 1.4rem; margin-bottom: 1rem; }
