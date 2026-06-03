@@ -91,6 +91,19 @@ function liveTicker() {
   }, 2200);
 }
 
+function chartDraw() {
+  const line = document.querySelector('.sc-line');
+  if (!line || !line.getTotalLength) return;
+  const len = line.getTotalLength();
+  gsap.set(line, { strokeDasharray: len, strokeDashoffset: len });
+  gsap.to(line, {
+    strokeDashoffset: 0,
+    duration: 1.9,
+    ease: 'power2.out',
+    scrollTrigger: { trigger: '.showcase', start: 'top 78%' },
+  });
+}
+
 export function initAnimations({ reduced }) {
   if (reduced) {
     // Ensure everything is visible; no motion.
@@ -112,4 +125,5 @@ export function initAnimations({ reduced }) {
   reveals();
   counters();
   liveTicker();
+  chartDraw();
 }
