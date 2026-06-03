@@ -9,6 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "assets": "node scripts/fetch-assets.mjs",
+    "optimize": "node scripts/optimize-assets.mjs",
     "favicons": "node scripts/gen-favicons.mjs"
   },
   "devDependencies": {
