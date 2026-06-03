@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 function heroIntro() {
   const hero = document.querySelector('[data-hero]');
   if (!hero) return;
-  gsap.set('[data-hero] .hero__inner', { opacity: 1 });
+  gsap.set('[data-hero] .hero__inner, [data-hero] .hero__panels', { opacity: 1 });
   const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
 
   tl.from('[data-hero] .hero__eyebrow', { y: 18, opacity: 0, duration: 0.8 })
@@ -19,6 +19,7 @@ function heroIntro() {
     )
     .from('[data-hero] .hero__sub', { y: 24, opacity: 0, duration: 0.9 }, '-=0.7')
     .from('[data-hero] .hero__cta > *', { y: 20, opacity: 0, duration: 0.7, stagger: 0.08 }, '-=0.6')
+    .from('[data-hero] .hero-card', { y: 36, opacity: 0, scale: 0.95, duration: 0.95, stagger: 0.14 }, '-=0.85')
     .from('[data-hero] .hero__scroll', { opacity: 0, duration: 0.6 }, '-=0.3');
 }
 
@@ -94,7 +95,7 @@ export function initAnimations({ reduced }) {
   if (reduced) {
     // Ensure everything is visible; no motion.
     gsap.set('[data-reveal], [data-reveal-children] > *', { clearProps: 'all', opacity: 1, y: 0 });
-    gsap.set('[data-hero] .hero__inner', { opacity: 1 });
+    gsap.set('[data-hero] .hero__inner, [data-hero] .hero__panels', { opacity: 1 });
     document.querySelectorAll('[data-count]').forEach((el) => {
       const decimals = parseInt(el.dataset.decimals || '0', 10);
       el.textContent =
