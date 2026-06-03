@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:docs": "vite build && rm -rf docs && cp -r dist docs && touch docs/.nojekyll",
     "preview": "vite preview",
     "assets": "node scripts/fetch-assets.mjs",
     "optimize": "node scripts/optimize-assets.mjs",
