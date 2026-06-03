@@ -4,6 +4,8 @@ import { resolve } from 'path';
 // Multi-page Vite setup. Each nav item is its own HTML entry point.
 export default defineConfig({
   root: '.',
+  // Relative base so the built site works under any path (e.g. GitHub Pages /Nexus/).
+  base: './',
   publicDir: 'public',
   build: {
     target: 'es2020',
