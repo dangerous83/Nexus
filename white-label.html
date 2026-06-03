@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>White-label — Nexus | Two surfaces. One platform. Your brand on both.</title>
+  <meta name="description" content="Every Nexus deployment ships with two complete products — the customer dashboard your traders use and the operator console your team runs the business with. Both white-labeled. Both yours." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="White-label — Nexus" />
+  <meta property="og:description" content="Two surfaces. One platform. Your brand on both — customer dashboard and operator console, white-labeled top to bottom." />
+  <meta property="og:image" content="/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="module" src="/src/scripts/main.js"></script>
+</head>
+<body data-page="whitelabel">
+  <header class="site-nav" data-nav></header>
+
+  <main>
+    <!-- ===== 03 platform surfaces ===== -->
+    <section class="section" style="padding-top: calc(var(--nav-h) + 4rem);">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__num">03</span> platform surfaces</p>
+          <h1 class="section-title" style="font-size: var(--fs-h1);">Two surfaces. One platform. Your brand on both.</h1>
+          <p class="section-lead">Every Nexus deployment ships with two complete products — the customer-facing dashboard your traders use, and the operator console your team runs the business with. Both white-labeled. Both yours.</p>
+        </div>
+
+        <!-- Customer dashboard -->
+        <div class="split" data-parallax-scope style="margin-bottom: clamp(3rem,2rem+4vw,6rem);">
+          <div class="split__copy" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__num">01</span> trade.yourbrand.com</p>
+            <h2 class="section-title" style="font-size: var(--fs-h3);">Customer dashboard</h2>
+            <p class="card__body">What your traders see at trade.yourbrand.com — markets, portfolio, deposits, withdrawals, OTC desk, full KYC and verification flows. Themed to your brand, localized to your market.</p>
+            <ul class="bullet-list">
+              <li><span class="arrow">→</span> Live market ticker, portfolio value, market overview</li>
+              <li><span class="arrow">→</span> Get-started onboarding with KYC progress</li>
+              <li><span class="arrow">→</span> Buy / Sell / Swap, OTC, deposits, withdrawals</li>
+              <li><span class="arrow">→</span> Regulatory badge (VARA / MiCA / MAS) baked in</li>
+            </ul>
+          </div>
+          <div class="split__media" data-reveal>
+            <div class="media-frame">
+              <div class="media-frame__parallax" data-parallax="9">
+                <img src="/assets/platform-layers.jpg" loading="lazy" decoding="async" alt="Abstract render representing the white-labeled Nexus customer dashboard — layered glowing surfaces in gold and black." onerror="this.closest('.media-frame').classList.add('media-frame--fallback')" />
+              </div>
+              <span class="media-frame__label">trade.yourbrand.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operator console -->
+        <div class="split split--reverse" data-parallax-scope>
+          <div class="split__copy" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__num">02</span> admin.yourbrand.com</p>
+            <h2 class="section-title" style="font-size: var(--fs-h3);">Operator console</h2>
+            <p class="card__body">What your ops, finance, and compliance teams use to run the business — customer accounts, KYC queue, trading desk, OTC, treasury, reconciliation, and audit trail.</p>
+            <ul class="bullet-list">
+              <li><span class="arrow">→</span> Customer operations, trading desk, OTC desk</li>
+              <li><span class="arrow">→</span> Customer treasury, finance, platform treasury</li>
+              <li><span class="arrow">→</span> Compliance queue and access control</li>
+              <li><span class="arrow">→</span> System health, reconciliation, audit log</li>
+            </ul>
+          </div>
+          <div class="split__media" data-reveal>
+            <div class="media-frame">
+              <div class="media-frame__parallax" data-parallax="9">
+                <img src="/assets/security-core.jpg" loading="lazy" decoding="async" alt="Abstract render representing the Nexus operator console — a secure control core glowing gold within deep black." onerror="this.closest('.media-frame').classList.add('media-frame--fallback')" />
+              </div>
+              <span class="media-frame__label">admin.yourbrand.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="meta-row" data-reveal>
+          <span><span class="dash">—</span> custom domain, TLS, CDN</span>
+          <span><span class="dash">—</span> design tokens for type, color, radii</span>
+          <span><span class="dash">—</span> localized copy across 24 languages</span>
+          <span><span class="dash">—</span> no “Powered by Nexus” anywhere</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 04 platform / architecture ===== -->
+    <section class="section section--pure" id="architecture">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__num">04</span> platform</p>
+          <h2 class="section-title">One platform. Ten products. Your brand on top.</h2>
+          <p class="section-lead">Nexus isn’t a toolkit — it’s the whole business, running. Look at it three ways: the layers that compose it, the regions it runs in, and what happens when something breaks.</p>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Platform views" data-reveal>
+          <button class="tab" role="tab" id="tab-stack" aria-controls="panel-stack" aria-selected="true">Stack — how the layers fit</button>
+          <button class="tab" role="tab" id="tab-deploy" aria-controls="panel-deploy" aria-selected="false">Deployment — where it runs</button>
+          <button class="tab" role="tab" id="tab-resil" aria-controls="panel-resil" aria-selected="false">Resilience — how it stays up</button>
+        </div>
+
+        <!-- Stack -->
+        <div class="tabpanel" role="tabpanel" id="panel-stack" aria-labelledby="tab-stack">
+          <div class="stack-layer">
+            <div class="stack-layer__head"><span class="stack-layer__num">01</span><span class="stack-layer__title">Your brand surface</span><span class="stack-layer__desc">What your customers see</span></div>
+            <div class="chip-grid">
+              <div class="chip"><div class="chip__name">Web app</div><div class="chip__meta">white-labeled</div></div>
+              <div class="chip"><div class="chip__name">iOS · Android</div><div class="chip__meta">your icon, your name</div></div>
+              <div class="chip"><div class="chip__name">Partner portals</div><div class="chip__meta">co-branded</div></div>
+            </div>
+          </div>
+          <div class="stack-layer">
+            <div class="stack-layer__head"><span class="stack-layer__num">02</span><span class="stack-layer__title">Operator consoles</span><span class="stack-layer__desc">What your team runs the business with</span></div>
+            <div class="chip-grid">
+              <div class="chip"><div class="chip__name">Trading ops</div><div class="chip__meta">markets, fees, incentives</div></div>
+              <div class="chip"><div class="chip__name">Treasury</div><div class="chip__meta">balances, flows, reconciliation</div></div>
+              <div class="chip"><div class="chip__name">Compliance</div><div class="chip__meta">KYC queue, alerts, case mgmt</div></div>
+              <div class="chip"><div class="chip__name">Risk</div><div class="chip__meta">limits, margining, circuit breakers</div></div>
+              <div class="chip"><div class="chip__name">Customer care</div><div class="chip__meta">accounts, tickets, KYC escalations</div></div>
+            </div>
+          </div>
+          <div class="stack-layer">
+            <div class="stack-layer__head"><span class="stack-layer__num">03</span><span class="stack-layer__title">Core platform</span><span class="stack-layer__desc">The engines running 24/7</span></div>
+            <div class="chip-grid">
+              <div class="chip"><div class="chip__name">Spot</div><div class="chip__meta">CLOB + AMM</div></div>
+              <div class="chip"><div class="chip__name">Lending</div><div class="chip__meta">earn · borrow</div></div>
+              <div class="chip"><div class="chip__name">Matching</div><div class="chip__meta">1.2M ord/s</div></div>
+              <div class="chip"><div class="chip__name">Custody</div><div class="chip__meta">MPC · HSM</div></div>
+              <div class="chip"><div class="chip__name">Ledger</div><div class="chip__meta">double-entry</div></div>
+              <div class="chip"><div class="chip__name">ComplianceX</div><div class="chip__meta">AML · built-in</div></div>
+              <div class="chip"><div class="chip__name">VerifiX</div><div class="chip__meta">KYC · built-in</div></div>
+            </div>
+          </div>
+          <div class="stack-layer">
+            <div class="stack-layer__head"><span class="stack-layer__num">04</span><span class="stack-layer__title">Nexus operates</span><span class="stack-layer__desc">What we keep running, so you don’t</span></div>
+            <div class="chip-grid">
+              <div class="chip"><div class="chip__name">Chains</div><div class="chip__meta">31 connected</div></div>
+              <div class="chip"><div class="chip__name">Banking rails</div><div class="chip__meta">SEPA · SWIFT · ACH · FedNow</div></div>
+              <div class="chip"><div class="chip__name">Market makers</div><div class="chip__meta">12 tier-1 relationships</div></div>
+              <div class="chip"><div class="chip__name">Compliance toolkit</div><div class="chip__meta">ComplianceX · VerifiX</div></div>
+            </div>
+          </div>
+          <div class="meta-row">
+            <span><span class="dash">—</span> customers see your brand</span>
+            <span><span class="dash">—</span> your team runs the operator consoles</span>
+            <span><span class="dash">—</span> Nexus runs everything below</span>
+          </div>
+        </div>
+
+        <!-- Deployment -->
+        <div class="tabpanel" role="tabpanel" id="panel-deploy" aria-labelledby="tab-deploy" hidden>
+          <div class="status" style="margin-bottom:1.5rem;">
+            <div class="status__bar">
+              <span class="status__live"><span class="dot"></span> platform · running now</span>
+              <span class="mono dim">all systems nominal · uptime <span class="status__pct">99.995%</span> · operated by Nexus</span>
+            </div>
+            <div class="status__foot">
+              <span>primary cloud <b>Azure · single-tenant</b></span>
+              <span>alternate <b>AWS · single-tenant VPCs</b></span>
+              <span>sovereign regions <b>where required</b></span>
+            </div>
+          </div>
+          <div class="chip-grid">
+            <div class="chip"><div class="chip__name">Chains</div><div class="chip__meta">31 connected</div></div>
+            <div class="chip"><div class="chip__name">Banking rails</div><div class="chip__meta">SEPA · SWIFT · ACH · FedNow</div></div>
+            <div class="chip"><div class="chip__name">Market makers</div><div class="chip__meta">12 tier-1 relationships</div></div>
+            <div class="chip"><div class="chip__name">Compliance toolkit</div><div class="chip__meta">ComplianceX · VerifiX</div></div>
+            <div class="chip"><div class="chip__name">Azure</div><div class="chip__meta">primary deployment target</div></div>
+            <div class="chip"><div class="chip__name">AWS</div><div class="chip__meta">alternate, all commercial regions</div></div>
+          </div>
+        </div>
+
+        <!-- Resilience -->
+        <div class="tabpanel" role="tabpanel" id="panel-resil" aria-labelledby="tab-resil" hidden>
+          <div class="card-grid cols-2">
+            <article class="card"><div class="card__icon" data-icon="layers"></div><h3 class="card__title">Active–active, two regions</h3><p class="card__body">Deterministic replay across regions; the matching engine fails over without losing a tick.</p></article>
+            <article class="card"><div class="card__icon" data-icon="gauge"></div><h3 class="card__title">99.995% uptime SLA</h3><p class="card__body">Contractual on the Regulated edition, with a named incident commander on rotation.</p></article>
+            <article class="card"><div class="card__icon" data-icon="shield"></div><h3 class="card__title">24/7 ITSEC SOC</h3><p class="card__body">Analysts on rotation with live ComplianceX + VerifiX feeds and 8-minute median triage.</p></article>
+            <article class="card"><div class="card__icon" data-icon="scan"></div><h3 class="card__title">Tested continuously</h3><p class="card__body">Quarterly third-party penetration tests, annual ITSEC red-team, public bug bounty with a $1M cap.</p></article>
+          </div>
+          <p style="margin-top:2rem;"><a class="link-underline" href="security.html">Full security &amp; compliance <span class="arrow">→</span></a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta" data-reveal data-parallax-scope>
+          <div class="cta__bg" data-parallax="8" style="--img: url('/assets/cta-ambient.jpg')"></div>
+          <h2 class="cta__title">Your brand on the front. Nexus underneath.</h2>
+          <p class="cta__sub">See both surfaces, themed to your brand, in a 45-minute walkthrough.</p>
+          <div class="cta__actions">
+            <a class="btn btn-primary btn-lg" href="contact.html" data-magnetic="0.3"><span class="btn__swap"><span>Book a demo →</span><span>Book a demo →</span></span></a>
+            <a class="btn btn-secondary btn-lg" href="modules.html">Explore modules</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-footer></footer>
+</body>
+</html>
