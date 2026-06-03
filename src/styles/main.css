@@ -489,7 +489,9 @@ body.nav-open .nav__toggle span::after { transform: rotate(-45deg); }
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background: var(--hairline-soft);
-  border-block: 1px solid var(--hairline-soft);
+  border: 1px solid var(--hairline-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
 .stat { background: var(--bg); padding: clamp(1.5rem, 1rem + 2vw, 2.75rem) clamp(1rem,0.5rem + 1.5vw,2rem); }
 .stat__num {
