@@ -16,21 +16,22 @@ function heroParallax() {
     scrub: true,
   };
 
-  // Background drifts down slowest; mid-ground grid faster; foreground rises.
+  // Distinct rates per layer create obvious depth: background pushes in slowly,
+  // atmosphere and grid race ahead, the headline rises and fades.
   const bg = hero.querySelector('.hero__bg');
   const grid = hero.querySelector('.hero__grid');
   const atmos = hero.querySelector('.hero__atmos');
   const inner = hero.querySelector('.hero__inner');
 
-  if (bg) gsap.to(bg, { yPercent: 16, ease: 'none', scrollTrigger: st });
-  if (atmos) gsap.to(atmos, { yPercent: 26, ease: 'none', scrollTrigger: st });
-  if (grid) gsap.to(grid, { yPercent: 38, ease: 'none', scrollTrigger: st });
-  if (inner) gsap.to(inner, { yPercent: -12, opacity: 0.4, ease: 'none', scrollTrigger: st });
+  if (bg) gsap.to(bg, { yPercent: 22, scale: 1.16, ease: 'none', scrollTrigger: st });
+  if (atmos) gsap.to(atmos, { yPercent: 40, ease: 'none', scrollTrigger: st });
+  if (grid) gsap.to(grid, { yPercent: 64, ease: 'none', scrollTrigger: st });
+  if (inner) gsap.to(inner, { yPercent: -26, opacity: 0, ease: 'none', scrollTrigger: st });
 }
 
 function sectionParallax() {
   gsap.utils.toArray('[data-parallax]').forEach((el) => {
-    const speed = parseFloat(el.dataset.parallax) || 12;
+    const speed = (parseFloat(el.dataset.parallax) || 12) * 1.8;
     gsap.fromTo(
       el,
       { yPercent: -speed },
