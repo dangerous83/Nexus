@@ -27,6 +27,12 @@ function heroParallax() {
   if (atmos) gsap.to(atmos, { yPercent: 40, ease: 'none', scrollTrigger: st });
   if (grid) gsap.to(grid, { yPercent: 64, ease: 'none', scrollTrigger: st });
   if (inner) gsap.to(inner, { yPercent: -26, opacity: 0, ease: 'none', scrollTrigger: st });
+
+  // floating platform panels drift at distinct rates for clear depth
+  const rates = [58, -34, 84];
+  hero.querySelectorAll('.hero-card').forEach((card, i) => {
+    gsap.to(card, { yPercent: rates[i % rates.length], ease: 'none', scrollTrigger: st });
+  });
 }
 
 function sectionParallax() {
