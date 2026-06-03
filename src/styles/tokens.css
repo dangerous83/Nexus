@@ -1,0 +1,110 @@
+/* ============================================================
+   NEXUS — Design Tokens
+   Dark / Black & Gold. Premium, restrained, never cheap.
+   ============================================================ */
+
+:root {
+  /* ---- Canvas & surfaces ---- */
+  --bg: #0a0a0b;            /* deep near-black canvas */
+  --bg-pure: #000000;       /* deepest contrast moments */
+  --bg-raise: #0e0e10;      /* faintly raised band */
+  --surface: #141416;       /* cards */
+  --surface-2: #17171a;     /* nested / warm-lifted card */
+  --surface-hover: #1b1b1f;
+
+  /* ---- Gold ---- */
+  --gold: #d4af37;          /* primary refined metallic gold */
+  --gold-muted: #9a8244;    /* secondary / muted gold */
+  --gold-bright: #fcf6ba;   /* highlight on the metallic gradient */
+  --gold-deep: #aa771c;     /* shadow on the metallic gradient */
+
+  /* The signature metallic gold gradient (hero display text, logo, accents) */
+  --gold-gradient: linear-gradient(
+    135deg,
+    #bf953f 0%,
+    #fcf6ba 28%,
+    #b38728 50%,
+    #fbf5b7 72%,
+    #aa771c 100%
+  );
+  /* A softer sheen used for hairlines and saber borders */
+  --gold-sheen: linear-gradient(
+    120deg,
+    rgba(212, 175, 55, 0) 0%,
+    rgba(212, 175, 55, 0.9) 45%,
+    rgba(252, 246, 186, 1) 50%,
+    rgba(212, 175, 55, 0.9) 55%,
+    rgba(212, 175, 55, 0) 100%
+  );
+
+  /* ---- Borders / hairlines ---- */
+  --hairline: rgba(212, 175, 55, 0.22);   /* gold hairline borders */
+  --hairline-soft: rgba(244, 241, 234, 0.08);
+  --hairline-strong: rgba(212, 175, 55, 0.42);
+
+  /* ---- Text ---- */
+  --text: #f4f1ea;                       /* warm off-white */
+  --text-dim: rgba(244, 241, 234, 0.68); /* secondary */
+  --text-faint: rgba(244, 241, 234, 0.42);
+  --text-gold: #e7c75a;
+
+  /* ---- Glow / hover light (gold-tinted, never pink) ---- */
+  --glow: rgba(212, 175, 55, 0.35);
+  --glow-soft: rgba(212, 175, 55, 0.16);
+  --glow-strong: rgba(212, 175, 55, 0.5);
+
+  /* ---- Status ---- */
+  --pos: #6fcf8e;   /* gains */
+  --neg: #d98c6a;   /* losses (warm, not red-pink) */
+
+  /* ---- Typography ---- */
+  --font-display: 'Space Grotesk Variable', 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Space Grotesk Variable', 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* Fluid type scale */
+  --fs-eyebrow: 0.75rem;
+  --fs-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --fs-lead: clamp(1.15rem, 1.05rem + 0.6vw, 1.5rem);
+  --fs-h3: clamp(1.25rem, 1.1rem + 0.9vw, 1.85rem);
+  --fs-h2: clamp(2rem, 1.4rem + 2.8vw, 3.75rem);
+  --fs-h1: clamp(2.75rem, 1.4rem + 6.2vw, 6.5rem);
+  --fs-display: clamp(3rem, 1rem + 9vw, 9rem);
+
+  /* ---- Spacing scale ---- */
+  --space-1: 0.5rem;
+  --space-2: 0.75rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+  --space-8: 7rem;
+  --space-9: 10rem;
+
+  --container: 1280px;
+  --container-wide: 1480px;
+  --gutter: clamp(1.25rem, 0.5rem + 3vw, 4rem);
+
+  /* ---- Radii ---- */
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);     /* premium, no bounce */
+  --ease-in-out: cubic-bezier(0.65, 0.05, 0.36, 1);
+  --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+  --dur-fast: 0.22s;
+  --dur: 0.32s;
+  --dur-slow: 0.5s;
+
+  /* ---- Elevation ---- */
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset,
+                 0 24px 60px -28px rgba(0, 0, 0, 0.85);
+  --shadow-glow: 0 0 0 1px var(--hairline),
+                 0 20px 60px -24px var(--glow-soft);
+
+  --nav-h: 76px;
+}

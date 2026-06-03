@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a demo — Nexus | The next exchange in your market</title>
+  <meta name="description" content="Book a 45-minute technical walkthrough with our solutions team. Bring your architect. We reply within one business day — no sales drip." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0a0a0b" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Book a demo — Nexus" />
+  <meta property="og:description" content="The next exchange in your market shouldn’t take two years to ship. Book a 45-minute technical walkthrough." />
+  <meta property="og:image" content="/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="module" src="/src/scripts/main.js"></script>
+</head>
+<body data-page="contact">
+  <header class="site-nav" data-nav></header>
+
+  <main>
+    <section class="section" style="padding-top: calc(var(--nav-h) + 4rem); position: relative;">
+      <div class="cta__bg" data-parallax-scope style="position:absolute; inset:0; --img: url('/assets/cta-ambient.jpg'); opacity:0.5;"></div>
+      <div class="container" style="position:relative; z-index:1;">
+        <div class="section-head" data-reveal style="max-width: 68ch;">
+          <p class="eyebrow"><span class="eyebrow__num">10</span> ready</p>
+          <h1 class="section-title" style="font-size: var(--fs-h1);">The next exchange in your market shouldn’t take two years to ship.</h1>
+          <p class="section-lead">Book a 45-minute technical walkthrough with our solutions team. Bring your architect.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card" data-reveal>
+            <form data-contact-form novalidate>
+              <div class="field">
+                <label class="field__label" for="email"><span class="slash">/</span> work email</label>
+                <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@company.com" required />
+              </div>
+              <div class="field">
+                <label class="field__label" for="company"><span class="slash">/</span> company</label>
+                <input id="company" name="company" type="text" autocomplete="organization" placeholder="Company" required />
+              </div>
+              <div class="field">
+                <label class="field__label" for="volume"><span class="slash">/</span> monthly volume (est.)</label>
+                <select id="volume" name="volume" required>
+                  <option value="" selected disabled>Select a range</option>
+                  <option>Under $10M</option>
+                  <option>$10M – $50M</option>
+                  <option>$50M – $250M</option>
+                  <option>$250M – $1B</option>
+                  <option>$1B+</option>
+                </select>
+              </div>
+              <button class="btn btn-primary btn-block btn-lg" type="submit" data-magnetic="0.2"><span class="btn__swap"><span>Book a demo →</span><span>Book a demo →</span></span></button>
+              <p class="form-note">we reply within one business day · no sales drip</p>
+            </form>
+          </div>
+
+          <aside class="contact-aside" data-reveal>
+            <p class="eyebrow" style="margin-bottom:1.25rem;">/ in 45 minutes</p>
+            <ul class="bullet-list" style="margin-top:0;">
+              <li><span class="arrow">→</span> A live tour of the customer dashboard and operator console</li>
+              <li><span class="arrow">→</span> The matching engine, custody, and the in-house compliance stack</li>
+              <li><span class="arrow">→</span> A phased rollout mapped to your licence and target markets</li>
+              <li><span class="arrow">→</span> Straight answers from engineers — bring your architect</li>
+            </ul>
+            <div class="rule" style="margin:2rem 0;"></div>
+            <p class="eyebrow" style="margin-bottom:1rem;">/ prefer email</p>
+            <p><a class="link-underline" href="mailto:sales@nexusio.ae">sales@nexusio.ae</a></p>
+            <div style="margin-top:2rem;">
+              <span class="footer__status"><span class="dot"></span> all systems nominal · 99.997% · 30-day</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-footer></footer>
+</body>
+</html>
